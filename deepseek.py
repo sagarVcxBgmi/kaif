@@ -347,7 +347,7 @@ def help_command(message):
 def grant_command(message):
     logging.info("Grant command received")
     caller = str(message.from_user.id)
-    if caller != OWNER_ID:
+    if caller not in OWNER_IDS:
         reply = bot.reply_to(message, "❌ You are not authorized to use this command.")
         Timer(10, lambda: bot.delete_message(reply.chat.id, reply.message_id)).start()
         return
@@ -386,7 +386,7 @@ def grant_command(message):
 def revoke_command(message):
     logging.info("Revoke command received")
     caller = str(message.from_user.id)
-    if caller != OWNER_ID:
+    if caller not in OWNER_IDS:
         reply = bot.reply_to(message, "❌ You are not authorized to use this command.")
         Timer(10, lambda: bot.delete_message(reply.chat.id, reply.message_id)).start()
         return
@@ -409,7 +409,7 @@ def revoke_command(message):
 def attack_limit_command(message):
     logging.info("Attack limit command received")
     caller = str(message.from_user.id)
-    if caller != OWNER_ID:
+    if caller not in OWNER_IDS:
         bot.reply_to(message, "❌ You are not authorized to use this command.")
         return
     command = message.text.split()
@@ -425,7 +425,7 @@ def attack_limit_command(message):
 def list_users_command(message):
     logging.info("List users command received")
     caller = str(message.from_user.id)
-    if caller != OWNER_ID:
+    if caller not in OWNER_IDS:
         bot.reply_to(message, "❌ You are not authorized to use this command.")
         return
     now = datetime.datetime.now()
