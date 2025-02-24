@@ -21,7 +21,7 @@ MAX_ATTACK_DURATION = 240
 USER_ACCESS_FILE = "user_access.txt"
 ATTACK_LOG_FILE = "attack_log.txt"
 OWNER_ID = "1148287810"
-bot = telebot.TeleBot('7887067116:AAHE2ULP35y2TBRS05z-5cAaDc-U6JmWDyU'EN')
+bot = telebot.TeleBot('7887067116:AAHE2ULP35y2TBRS05z-5cAaDc-U6JmWDyU')
 
 # Auto-convert backup file on first run
 if not os.path.exists(USER_ACCESS_FILE) and os.path.exists("user_access_backup.txt"):
