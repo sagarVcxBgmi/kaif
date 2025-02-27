@@ -20,7 +20,7 @@ void* send_payload(void* arg) {
     struct sockaddr_in server_addr;
     char payload[PAYLOAD_SIZE];
 
-    memset(payload, '90', PAYLOAD_SIZE - 1);
+    memset(payload, 'X', PAYLOAD_SIZE - 1);
     payload[PAYLOAD_SIZE - 1] = '\0';
 
     sock = socket(AF_INET, SOCK_DGRAM, 0);
