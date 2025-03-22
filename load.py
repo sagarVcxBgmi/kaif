@@ -1,3 +1,4 @@
+
 import telebot
 import datetime
 import os
@@ -17,7 +18,7 @@ import math
 logging.basicConfig(level=logging.INFO)
 
 # Constants
-MAX_ATTACK_DURATION = 240
+MAX_ATTACK_DURATION = 150
 USER_ACCESS_FILE = "user_access.txt"
 ATTACK_LOG_FILE = "attack_log.txt"
 OWNER_ID = "1148287810"
@@ -281,7 +282,7 @@ def handle_bgmi(message):
     
     try:
         subprocess.Popen(
-           ["./rishi", target, str(port), str(duration), "900"],
+           ["./bgmi", target, str(port), str(duration), "900"],
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL
         )
